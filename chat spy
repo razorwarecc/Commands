@@ -1,0 +1,26 @@
+
+Config = {
+	enabled = true,
+	spyOnMyself = false,
+	public = true,
+	publicItalics = true
+}
+
+PrivateProperties = {
+	Color = Color3.fromRGB(0,255,255); 
+	Font = Enum.Font.SourceSansBold;
+	TextSize = 18;
+}
+
+	local StarterGui = game:GetService("StarterGui")
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	local instance = (_G.chatSpyInstance or 0) + 1
+	_G.chatSpyInstance = instance
+	
+
+	PrivateProperties.Text = "{AKUMA CHAT SPY ENABLED}"
+	StarterGui:SetCore("ChatMakeSystemMessage", PrivateProperties)
+	local chatFrame = player.PlayerGui.Chat.Frame
+	chatFrame.ChatChannelParentFrame.Visible = true
+	chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
