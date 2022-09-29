@@ -18,7 +18,7 @@ Mouse.KeyDown:Connect(function(KeyPressed)
                 Plr = FindClosestPlayer()
                 local Notify = NotifyLibrary.Notify
                     Notify({
-                        Title = "amh | <3",
+                        Title = "Akuma AimLock",
                         Description = "Unlocked",
                         Duration = 5
                     })
@@ -29,7 +29,7 @@ Mouse.KeyDown:Connect(function(KeyPressed)
             if Settings.AimLock.Notifications == true then
                 local Notify = NotifyLibrary.Notify
                 Notify({
-                    Title = "amh | <3",
+                    Title = "Akuma AimLock",
                     Description = "Locked On: " ..tostring(Plr.Character.Humanoid.DisplayName),
                     Duration = 5
                 })
