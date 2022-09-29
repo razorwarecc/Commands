@@ -2,8 +2,8 @@
 Config = {
 	enabled = false,
 	spyOnMyself = false,
-	public = true,
-	publicItalics = true
+	public = false,
+	publicItalics = false
 }
 
 PrivateProperties = {
@@ -19,8 +19,7 @@ PrivateProperties = {
 	_G.chatSpyInstance = instance
 	
 
-	PrivateProperties.Text = "{AKUMA CHAT SPY ENABLED}"
+	PrivateProperties.Text = "{AKUMA CHAT SPY DISABLED}"
 	StarterGui:SetCore("ChatMakeSystemMessage", PrivateProperties)
 	local chatFrame = player.PlayerGui.Chat.Frame
-	chatFrame.ChatChannelParentFrame.Visible = true
-	chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
+	chatFrame.ChatChannelParentFrame.Visible = false
