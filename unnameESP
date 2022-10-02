@@ -1,5 +1,0 @@
-    for i, v in pairs(workspace:GetChildren()) do
-        if v.Name == "AKUMA_ESP" then
-            v:Destroy()
-        end
-    end
